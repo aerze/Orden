@@ -1,10 +1,8 @@
 {
   "name": "orden",
   "version": "0.0.0",
-  "description": "Web-based internal inventory management system.",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
   "repository": {
     "type": "git",
@@ -14,9 +12,35 @@
     "Terrell Vest <terrell@terrellvest.com> (https://github.com/mirprest)",
     "Gustavo Suarez <gus@mythril.co> (https://github.com/aerze)"
   ],
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/aerze/Orden/issues"
   },
-  "homepage": "https://github.com/aerze/Orden#readme"
+  "homepage": "https://github.com/aerze/Orden#readme",
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "jade": "~1.11.0",
+    "morgan": "~1.6.1",
+    "node-sass-middleware": "0.8.0",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "react-redux": "^4.0.6",
+    "redux": "^3.0.5",
+    "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.6.0"
+  }
 }
