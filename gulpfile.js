@@ -3,22 +3,31 @@ var jade = require("gulp-jade");
 var sass = require("gulp-sass");
 var babel = require("gulp-babel");
 var sourcemaps = require("gulp-sourcemaps");
+var webpack = require("gulp-webpack");
+var webpackConfig = require("./webpack.config.js")
 
-// should convert all es6 and jsx code in _src javascripts folder
+
+// should convert all es6 and jsx code to es5
 gulp.task("babel", function(){
-  gulp.src("_src/public/javascripts/**/*.es6",{"base":"_src"})
+  gulp.src("src/public/javascripts/es6/*.es6")
     .pipe(sourcemaps.init())
     .pipe(babel())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest("_dist/"));
+    .pipe(gulp.dest("./src/public/javascripts/es5/"));
+})
+// should convert all es6 and jsx code in _src javascripts folder
+gulp.task("webpack", ["babel"], function(){
+  gulp.src("src/public/javascripts/es5/entry.js")
+    .pipe(webpack(webpackConfig))
+    .pipe(gulp.dest("dist/public/javascripts"));
 })
 // should convert main sass code in _src styles folder to one main css file
-gulp.task("sass", ["babel"],function(){
-  gulp.src("_src/public/styles/main.scss",{"base":"_src"})
+gulp.task("sass", ["webpack"],function(){
+  gulp.src("src/public/styles/main.scss",{"base":"src"})
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest("_dist/"));
+    .pipe(gulp.dest("dist/"));
 })
 
-gulp.task("default", ["babel","sass"])
+gulp.task("default", ["babel","webpack","sass"])
