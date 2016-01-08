@@ -1,0 +1,22 @@
+{
+  "name": "orden",
+  "version": "0.0.0",
+  "description": "Web-based internal inventory management system.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aerze/Orden.git"
+  },
+  "authors": [
+    "Terrell Vest <terrell@terrellvest.com> (https://github.com/mirprest)",
+    "Gustavo Suarez <gus@mythril.co> (https://github.com/aerze)"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aerze/Orden/issues"
+  },
+  "homepage": "https://github.com/aerze/Orden#readme"
+}
