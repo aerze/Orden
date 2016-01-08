@@ -9,7 +9,7 @@ var webpackConfig = require("./webpack.config.js")
 
 // should convert all es6 and jsx code to es5
 gulp.task("babel", function(){
-  gulp.src("src/public/javascripts/es6/*.es6")
+  gulp.src("src/public/javascripts/es6/**/*.es6")
     .pipe(sourcemaps.init())
     .pipe(babel())
     .pipe(sourcemaps.write())
@@ -29,5 +29,13 @@ gulp.task("sass", ["webpack"],function(){
     .pipe(sourcemaps.write())
     .pipe(gulp.dest("dist/"));
 })
+// Compile index jade file
+gulp.task("jade", ["sass"],function(){
+  gulp.src("src/public/jade/index.jade",{base: "./src/public/jade"})
+    .pipe(jade({
+      pretty: true
+    }))
+    .pipe(gulp.dest("./"));
+})
 
-gulp.task("default", ["babel","webpack","sass"])
+gulp.task("default", ["babel","webpack","sass","jade"])

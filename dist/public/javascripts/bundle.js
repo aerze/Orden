@@ -60,8 +60,20 @@
 
 	// import {App} from "./components/app.js";
 
-	_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('main'));
-	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImVudHJ5LmVzNiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7O0FBTUEsbUJBQVMsTUFBTSxDQUNiLDhCQUFDLEdBQUcsT0FBRSxFQUNOLFFBQVEsQ0FBQyxjQUFjLENBQUMsTUFBTSxDQUFDLENBQ2hDLENBQUEiLCJmaWxlIjoiZW50cnkuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSBcInJlYWN0XCI7XHJcbmltcG9ydCBSZWFjdERPTSBmcm9tIFwicmVhY3QtZG9tXCI7XHJcbi8vIGltcG9ydCB7RXZlbnRFbWl0dGVyfSBmcm9tIFwiZXZlbnRzXCI7XHJcblxyXG4vLyBpbXBvcnQge0FwcH0gZnJvbSBcIi4vY29tcG9uZW50cy9hcHAuanNcIjtcclxuXHJcblJlYWN0RE9NLnJlbmRlcihcclxuICA8QXBwLz4sXHJcbiAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ21haW4nKVxyXG4pXHJcbiJdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ==
+	var App = _react2.default.createClass({
+	  displayName: "App",
+
+	  render: function render() {
+	    return _react2.default.createElement(
+	      "h2",
+	      null,
+	      "React, Babel & Webpack setup correctly!"
+	    );
+	  }
+	});
+
+	_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('app'));
+	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImVudHJ5LmVzNiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7O0FBTUEsSUFBTSxHQUFHLEdBQUcsZ0JBQU0sV0FBVyxDQUFDOzs7QUFDNUIsUUFBTSxFQUFFLGtCQUFVO0FBQ2hCLFdBQVM7Ozs7S0FBZ0QsQ0FBRTtHQUM1RDtDQUNGLENBQUMsQ0FBQTs7QUFFRixtQkFBUyxNQUFNLENBQ2IsOEJBQUMsR0FBRyxPQUFFLEVBQ04sUUFBUSxDQUFDLGNBQWMsQ0FBQyxLQUFLLENBQUMsQ0FDL0IsQ0FBQSIsImZpbGUiOiJlbnRyeS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tIFwicmVhY3RcIjtcclxuaW1wb3J0IFJlYWN0RE9NIGZyb20gXCJyZWFjdC1kb21cIjtcclxuLy8gaW1wb3J0IHtFdmVudEVtaXR0ZXJ9IGZyb20gXCJldmVudHNcIjtcclxuXHJcbi8vIGltcG9ydCB7QXBwfSBmcm9tIFwiLi9jb21wb25lbnRzL2FwcC5qc1wiO1xyXG5cclxuY29uc3QgQXBwID0gUmVhY3QuY3JlYXRlQ2xhc3Moe1xyXG4gIHJlbmRlcjogZnVuY3Rpb24oKXtcclxuICAgIHJldHVybiAoIDxoMj5SZWFjdCwgQmFiZWwgJiBXZWJwYWNrIHNldHVwIGNvcnJlY3RseSE8L2gyPiApXHJcbiAgfVxyXG59KVxyXG5cclxuUmVhY3RET00ucmVuZGVyKFxyXG4gIDxBcHAvPixcclxuICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnYXBwJylcclxuKVxyXG4iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0=
 
 
 /***/ },
